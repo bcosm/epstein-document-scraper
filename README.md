@@ -18,18 +18,11 @@ A tool to search, download, extract text from, and deduplicate documents from th
 ### Steps
 
 1. **[Download the ZIP](https://github.com/bcosm/epstein-document-scraper/archive/refs/heads/master.zip)**
-2. **Extract** the ZIP to any folder
-
-#### Windows
-3. Double-click **`run.bat`**
-4. On first run, it will automatically download Python + dependencies (~100MB total, one-time)
-
-#### Mac / Linux
-3. Install Python 3.10+ if you don't have it (`brew install python3` on Mac)
-4. Open Terminal, `cd` into the extracted folder, and run: `bash run.sh`
-5. On first run, it will install dependencies automatically
-
-#### Both Platforms
+2. **Extract** the ZIP to any folder (right-click → "Extract All" on Windows)
+3. **Run the launcher:**
+   - **Windows** — Double-click **`run.bat`** (auto-downloads Python if needed)
+   - **Mac/Linux** — Open Terminal, `cd` into the folder, run `bash run.sh` (requires [Python 3.10+](https://www.python.org/downloads/))
+4. On first run, dependencies are installed automatically (~100MB, one-time)
 5. Type your search term and press Enter
    - Single query: `trump`
    - Multiple queries (comma-separated): `minor, children, trafficking`

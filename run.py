@@ -13,7 +13,7 @@ will execute automatically.
 # ║  EDIT THESE                                                     ║
 # ╚══════════════════════════════════════════════════════════════════╝
 
-QUERIES = ["trump"]          # Add/change queries here
+QUERIES = ["passport"]          # Add/change queries here
 OUTPUT_DIR = "results"          # Output folder name
 MAX_PAGES = 9999                # Max pages per query (10 results/page), 9999 = all
 
