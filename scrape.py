@@ -71,6 +71,7 @@ RESULTS_PER_PAGE = 10
 MAX_RETRIES = 3
 PAGE_LIMIT_DEFAULT = 9999  # effectively unlimited
 CONCURRENT_DOWNLOADS = 4   # parallel download slots
+DOWNLOAD_TIMEOUT = 300_000  # 5 minutes per file (some are 100MB+)
 
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
@@ -312,7 +313,7 @@ class EpsteinScraper:
             async with sem:
                 for attempt in range(1, MAX_RETRIES + 1):
                     try:
-                        resp = await self.s.page.request.get(url, timeout=45_000)
+                        resp = await self.s.page.request.get(url, timeout=DOWNLOAD_TIMEOUT)
                         if resp.ok:
                             data = await resp.body()
                             if len(data) > 500:
