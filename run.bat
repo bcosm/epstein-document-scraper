@@ -109,11 +109,11 @@ echo ================================================================
 echo   SETUP COMPLETE - Ready to search
 echo ================================================================
 echo.
-echo   Enter one or more search terms separated by spaces.
+echo   Enter search terms, separated by commas for multiple queries.
 echo   Examples:
 echo     passport
 echo     trump
-echo     minor children trafficking
+echo     minor, children, trafficking
 echo.
 set /p "QUERY=  Search for: "
 
@@ -124,13 +124,23 @@ if "%QUERY%"=="" (
     exit /b 1
 )
 
+:: ── Parse comma-separated queries into arguments ────────────────
+:: Convert "minor, children, trafficking" into "minor" "children" "trafficking"
+set "ARGS="
+for %%a in ("%QUERY:,=" "%") do (
+    set "ITEM=%%~a"
+    :: Trim leading/trailing spaces via a for loop
+    for /f "tokens=* delims= " %%b in ("!ITEM!") do set "ITEM=%%b"
+    if not "!ITEM!"=="" set "ARGS=!ARGS! "!ITEM!""
+)
+
 :: ── Run the scraper ─────────────────────────────────────────────
 echo.
-echo   Starting scraper for: %QUERY%
+echo   Starting scraper for:%ARGS%
 echo   (A Firefox window will open - don't close it!)
 echo.
 
-"%PYTHON%" "%~dp0scrape.py" %QUERY% -o results
+"%PYTHON%" "%~dp0scrape.py" %ARGS% -o results
 
 echo.
 echo ================================================================

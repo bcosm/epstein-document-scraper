@@ -15,17 +15,24 @@ A tool to search, download, extract text from, and deduplicate documents from th
 
 ## Easy Mode (Non-Technical Users)
 
-### Prerequisites
-
-None! Everything is installed automatically on first run.
-
 ### Steps
 
 1. **[Download the ZIP](https://github.com/bcosm/epstein-document-scraper/archive/refs/heads/master.zip)**
-2. **Extract** the ZIP to any folder (right-click → "Extract All")
-3. **Double-click `run.bat`** inside the extracted folder
+2. **Extract** the ZIP to any folder
+
+#### Windows
+3. Double-click **`run.bat`**
 4. On first run, it will automatically download Python + dependencies (~100MB total, one-time)
-5. Type your search term (e.g. `trump`, `passport`, `minor children`) and press Enter
+
+#### Mac / Linux
+3. Install Python 3.10+ if you don't have it (`brew install python3` on Mac)
+4. Open Terminal, `cd` into the extracted folder, and run: `bash run.sh`
+5. On first run, it will install dependencies automatically
+
+#### Both Platforms
+5. Type your search term and press Enter
+   - Single query: `trump`
+   - Multiple queries (comma-separated): `minor, children, trafficking`
 6. A Firefox window will open — **don't close it** — it's doing the work
 7. When it's done, your results are in the `results` folder:
    - `results/pdfs/` — The downloaded PDF documents
@@ -108,9 +115,10 @@ The DOJ site has an age-verification gate and bot detection that blocks typical 
 
 ## Requirements
 
-- Windows 10/11 (for `run.bat`; the Python scripts work on any OS)
+- **Windows**: Nothing pre-installed needed — `run.bat` handles everything
+- **Mac/Linux**: Python 3.10+ required (`brew install python3` or `apt install python3`)
 - Internet connection
-- ~150MB disk for Python + dependencies (auto-installed on first run)
+- ~150MB disk for dependencies (auto-installed on first run)
 - Additional ~50MB per 100 PDFs downloaded (varies by document size)
 
 ## License
