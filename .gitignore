@@ -36,3 +36,7 @@ DataSet*.zip
 results/
 multi_results/
 scraped_output/
+
+
+new_instructions.md
+AGENTS.md
