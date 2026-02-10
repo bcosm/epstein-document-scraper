@@ -17,18 +17,17 @@ A tool to search, download, extract text from, and deduplicate documents from th
 
 ### Prerequisites
 
-1. **Install Python** — Download from [python.org/downloads](https://www.python.org/downloads/)
-   - **IMPORTANT**: Check **"Add Python to PATH"** during installation
-2. **Download this tool** — [Click here to download the ZIP](https://github.com/bcosm/epstein-document-scraper/archive/refs/heads/master.zip)
-3. **Extract the ZIP** to any folder
+None! Everything is installed automatically on first run.
 
-### Run It
+### Steps
 
-1. Double-click **`run.bat`**
-2. It will automatically install everything needed (first run only)
-3. Type your search term (e.g. `trump`, `passport`, `minor children`) and press Enter
-4. A Firefox window will open — **don't close it** — it's doing the work
-5. When it's done, your results are in the `results` folder:
+1. **[Download the ZIP](https://github.com/bcosm/epstein-document-scraper/archive/refs/heads/master.zip)**
+2. **Extract** the ZIP to any folder (right-click → "Extract All")
+3. **Double-click `run.bat`** inside the extracted folder
+4. On first run, it will automatically download Python + dependencies (~100MB total, one-time)
+5. Type your search term (e.g. `trump`, `passport`, `minor children`) and press Enter
+6. A Firefox window will open — **don't close it** — it's doing the work
+7. When it's done, your results are in the `results` folder:
    - `results/pdfs/` — The downloaded PDF documents
    - `results/texts/` — Extracted plain text from each PDF
 
@@ -109,9 +108,10 @@ The DOJ site has an age-verification gate and bot detection that blocks typical 
 
 ## Requirements
 
-- Python 3.10+
-- Windows (for `run.bat`; the Python scripts work on any OS)
-- ~50MB disk per 100 PDFs (varies by document size)
+- Windows 10/11 (for `run.bat`; the Python scripts work on any OS)
+- Internet connection
+- ~150MB disk for Python + dependencies (auto-installed on first run)
+- Additional ~50MB per 100 PDFs downloaded (varies by document size)
 
 ## License
 

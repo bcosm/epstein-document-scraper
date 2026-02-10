@@ -10,6 +10,7 @@ build/
 .venv/
 venv/
 env/
+python/
 
 # IDE
 .vscode/
