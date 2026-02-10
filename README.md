@@ -2,7 +2,7 @@
 
 A tool to search, download, extract text from, and deduplicate documents from the [DOJ Epstein Document Library](https://www.justice.gov/epstein/search).
 
-> **[Download ZIP](https://github.com/bcosm/epstein-processor/archive/refs/heads/master.zip)** — One-click download, instructions below.
+> **[Download ZIP](https://github.com/bcosm/epstein-document-scraper/archive/refs/heads/master.zip)** — One-click download, instructions below.
 
 ## What It Does
 
@@ -19,7 +19,7 @@ A tool to search, download, extract text from, and deduplicate documents from th
 
 1. **Install Python** — Download from [python.org/downloads](https://www.python.org/downloads/)
    - **IMPORTANT**: Check **"Add Python to PATH"** during installation
-2. **Download this tool** — [Click here to download the ZIP](https://github.com/bcosm/epstein-processor/archive/refs/heads/master.zip)
+2. **Download this tool** — [Click here to download the ZIP](https://github.com/bcosm/epstein-document-scraper/archive/refs/heads/master.zip)
 3. **Extract the ZIP** to any folder
 
 ### Run It
