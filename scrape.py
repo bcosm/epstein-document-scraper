@@ -261,7 +261,8 @@ class EpsteinScraper:
 
         total = data["hits"]["total"]["value"]
         total_pages = min(math.ceil(total / RESULTS_PER_PAGE), self.max_pages)
-        print(f"  [search] {total} results  ({total_pages} pages, capped at {self.max_pages})")
+        print(f"  [search] {total} index entries  ({total_pages} pages, capped at {self.max_pages})")
+        print(f"           (many entries reference the same PDF — unique count will be lower)")
 
         # Collect URLs from first page
         all_urls: set[str] = set()
@@ -281,8 +282,8 @@ class EpsteinScraper:
             if pg % 20 == 0 or pg == total_pages:
                 print(f"    page {pg}/{total_pages}: +{added}  (total {len(all_urls)})")
             if added == 0:
-                # No new results — we've exhausted the data
-                print(f"    page {pg}: 0 new results, stopping")
+                # No new results — remaining entries all reference already-seen PDFs
+                print(f"    page {pg}: 0 new unique PDFs, all remaining are duplicates — stopping")
                 break
 
         print(f"  [search] collected {len(all_urls)} unique PDF URLs")
