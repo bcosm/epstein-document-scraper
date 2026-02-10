@@ -21,7 +21,8 @@ A tool to search, download, extract text from, and deduplicate documents from th
 2. **Extract** the ZIP to any folder (right-click → "Extract All" on Windows)
 3. **Run the launcher:**
    - **Windows** — Double-click **`run.bat`** (auto-downloads Python if needed)
-   - **Mac/Linux** — Open Terminal, `cd` into the folder, run `bash run.sh` (requires [Python 3.10+](https://www.python.org/downloads/))
+   - **Mac** — Double-click **`run.command`** (requires [Python 3.10+](https://www.python.org/downloads/) — get it with `brew install python3`)
+   - **Linux** — Open Terminal, run `bash run.sh` (requires Python 3.10+)
 4. On first run, dependencies are installed automatically (~100MB, one-time)
 5. Type your search term and press Enter
    - Single query: `trump`
@@ -109,7 +110,8 @@ The DOJ site has an age-verification gate and bot detection that blocks typical 
 ## Requirements
 
 - **Windows**: Nothing pre-installed needed — `run.bat` handles everything
-- **Mac/Linux**: Python 3.10+ required (`brew install python3` or `apt install python3`)
+- **Mac**: Python 3.10+ (`brew install python3`), then just double-click `run.command`
+- **Linux**: Python 3.10+ (`apt install python3 python3-venv python3-pip`)
 - Internet connection
 - ~150MB disk for dependencies (auto-installed on first run)
 - Additional ~50MB per 100 PDFs downloaded (varies by document size)
