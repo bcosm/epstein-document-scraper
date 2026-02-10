@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.history/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Downloaded data (large - not for git)
+*_results/
+*_pdfs/
+*_txts/
+greece_pdfs/
+greece_txts/
+search_results/
+DataSet*.zip
+
+# Scraper output directories
+results/
+multi_results/
+scraped_output/
